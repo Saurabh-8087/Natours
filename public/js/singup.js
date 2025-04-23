@@ -7,7 +7,7 @@ export const singup = async(name,email, password, passwordConfirm)=>{
     const res= await axios({
       method:'POST',
       // url:'http://127.0.0.1:3000/api/v1/users/signup',
-      url:`${req.protocol}://${req.get('host')}/api/v1/users/singup`,
+      url:`http://${window.location.hostname}:3000/api/v1/users/singup`,
       data:{
         name,
         email,
