@@ -11489,7 +11489,8 @@ var login = exports.login = /*#__PURE__*/function () {
           _context.next = 3;
           return (0, _axios.default)({
             method: 'POST',
-            url: 'http://127.0.0.1:3000/api/v1/users/login',
+            // url:'http://127.0.0.1:3000/api/v1/users/login',
+            url: "http://".concat(window.location.hostname, ":3000/api/v1/users/login"),
             data: {
               email: email,
               password: password
@@ -11530,7 +11531,8 @@ var logout = exports.logout = /*#__PURE__*/function () {
           _context2.next = 3;
           return (0, _axios.default)({
             method: 'GET',
-            url: 'http://127.0.0.1:3000/api/v1/users/logout'
+            // url:'http://127.0.0.1:3000/api/v1/users/logout',
+            url: "http://".concat(window.location.hostname, ":3000/api/v1/users/logout")
           });
         case 3:
           res = _context2.sent;
@@ -11871,7 +11873,8 @@ var singup = exports.singup = /*#__PURE__*/function () {
           _context.next = 3;
           return (0, _axios.default)({
             method: 'POST',
-            url: 'http://127.0.0.1:3000/api/v1/users/signup',
+            // url:'http://127.0.0.1:3000/api/v1/users/signup',
+            url: "http://".concat(window.location.hostname, ":3000/api/v1/users/singup"),
             data: {
               name: name,
               email: email,
@@ -12156,8 +12159,8 @@ var checkedAssets, assetsToAccept;
 var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
-  var protocol = location.protocol === 'http:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62314" + '/');
+  var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55230" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
