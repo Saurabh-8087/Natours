@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-lonely-if */
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
